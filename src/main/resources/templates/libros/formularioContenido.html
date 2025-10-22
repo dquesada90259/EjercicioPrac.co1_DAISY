@@ -1,11 +1,12 @@
 <div th:fragment="content">
   <h2 th:text="${titulo}"></h2>
 
-  <form action="#" method="post">
+  <form th:action="@{/libros/guardar}" method="post" th:object="${libro}">
     <label>Título:</label>
-    <input type="text" name="titulo" th:value="${libro.titulo}" />
+    <input type="text" th:field="*{titulo}" />
 
     <button type="submit">Guardar</button>
   </form>
 </div>
+
 
