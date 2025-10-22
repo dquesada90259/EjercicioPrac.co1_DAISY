@@ -1,0 +1,24 @@
+<div>
+    <h2>Lista de Libros</h2>
+    <a th:href="@{/libros/nuevo}">Agregar Libro</a>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th><th>Título</th><th>Autor</th><th>ISBN</th><th>Año</th><th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="libro : ${libros}">
+                <td th:text="${libro.id}"></td>
+                <td th:text="${libro.titulo}"></td>
+                <td th:text="${libro.autor}"></td>
+                <td th:text="${libro.isbn}"></td>
+                <td th:text="${libro.anio}"></td>
+                <td>
+                    <a th:href="@{/libros/editar/{id}(id=${libro.id})}">Editar</a> |
+                    <a th:href="@{/libros/eliminar/{id}(id=${libro.id})}" onclick="return confirm('¿Está seguro que desea eliminar este libro?');">Eliminar</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

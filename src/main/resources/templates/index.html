@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title th:text="${titulo}">Biblioteca de Daisy Quesada</title>
+</head>
+<body>
+
+  <header>
+    <h1>Biblioteca de Daisy Quesada</h1>
+    <p>Busca diferentes libros</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a th:href="@{/}">Inicio</a></li>
+      <li><a th:href="@{/libros}">Ver Libros</a></li>
+      <li><a th:href="@{/libros/nuevo}">Agregar Libro</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div th:replace="${contenido} :: content"></div>
+  </main>
+
+  <footer>@ 2025 Derechos Reservados</footer>
+
+</body>
+</html>
+
+
+
+

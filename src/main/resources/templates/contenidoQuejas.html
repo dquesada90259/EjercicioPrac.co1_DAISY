@@ -1,0 +1,17 @@
+<!-- templates/quejasContent.html -->
+<div class="quejas-formulario">
+    <h2>Quejas y Sugerencias</h2>
+    <form th:action="@{/quejas/enviar}" method="post">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="correo">Correo electrónico:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+
+        <button type="submit">Enviar</button>
+    </form>
+</div>
+

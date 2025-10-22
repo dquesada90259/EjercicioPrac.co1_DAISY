@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      th:replace="index :: index (~{::body})"
+      th:with="titulo=${libro.id} != null ? 'Editar Libro' : 'Nuevo Libro', contenido='libros/formularioContenido'">
+
+<body>
+</body>
+</html>
+
